@@ -27,14 +27,18 @@ export default {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#1a365d",
+          light: "#2d4a7c",
+          dark: "#132844",
           foreground: "#ffffff",
         },
         secondary: {
           DEFAULT: "#4a5568",
+          light: "#647187",
+          dark: "#2d3748",
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#e8e6e1",
+          DEFAULT: "#f7fafc",
           foreground: "#1a365d",
         },
         destructive: {
@@ -67,10 +71,15 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-out forwards",
       },
     },
   },
