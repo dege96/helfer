@@ -6,7 +6,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-lg bg-white/80">
+    <nav className="bg-accent/80 border-b border-primary/10 sticky top-0 z-50 backdrop-blur-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="font-georgia text-2xl font-bold text-primary">
@@ -24,7 +24,7 @@ const Navigation = () => {
             <Button 
               variant="default" 
               size="lg" 
-              className="bg-primary hover:bg-primary-light text-white font-helvetica transition-all duration-300"
+              className="bg-primary hover:bg-primary-light text-accent font-helvetica transition-all duration-300"
             >
               Begär offert
             </Button>
@@ -54,7 +54,7 @@ const Navigation = () => {
             <Button 
               variant="default" 
               size="lg" 
-              className="w-full bg-primary hover:bg-primary-light text-white transition-all duration-300"
+              className="w-full bg-primary hover:bg-primary-light text-accent transition-all duration-300"
             >
               Begär offert
             </Button>

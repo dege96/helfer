@@ -1,30 +1,29 @@
-
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-accent">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary-light to-primary-dark py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-primary py-24 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl">
-            <h1 className="font-georgia text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+            <h1 className="font-georgia text-4xl md:text-6xl font-bold text-accent mb-6 animate-fade-in">
               Precisionsdetaljer och splines sedan 1959
             </h1>
-            <p className="font-helvetica text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="font-helvetica text-lg md:text-xl text-accent/90 mb-8 leading-relaxed">
               Vi levererar högkvalitativa precisionsdetaljer med fokus på snabb tillverkning och leverans.
               Vår erfarenhet garanterar precision i varje detalj.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-accent font-helvetica transition-all duration-300 transform hover:scale-105">
+              <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 font-helvetica transition-all duration-300 transform hover:scale-105">
                 Begär offert
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 font-helvetica">
+              <Button size="lg" variant="outline" className="text-accent border-accent hover:bg-accent/10 font-helvetica">
                 Läs mer om oss
               </Button>
             </div>
@@ -44,28 +43,24 @@ const Index = () => {
               Vår långa erfarenhet och gedigna kunskap garanterar högsta kvalitet i varje projekt.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-2 bg-primary mb-6 rounded"></div>
-                <h3 className="font-georgia text-xl font-bold text-primary mb-4">Precision</h3>
-                <p className="font-helvetica text-secondary">Högsta precision i varje detalj vi producerar.</p>
-              </div>
-              <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-2 bg-primary mb-6 rounded"></div>
-                <h3 className="font-georgia text-xl font-bold text-primary mb-4">Kvalitet</h3>
-                <p className="font-helvetica text-secondary">Kvalitetssäkring i alla led av processen.</p>
-              </div>
-              <div className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-2 bg-primary mb-6 rounded"></div>
-                <h3 className="font-georgia text-xl font-bold text-primary mb-4">Leverans</h3>
-                <p className="font-helvetica text-secondary">Snabb och pålitlig leverans till våra kunder.</p>
-              </div>
+              {[
+                { title: "Precision", text: "Högsta precision i varje detalj vi producerar." },
+                { title: "Kvalitet", text: "Kvalitetssäkring i alla led av processen." },
+                { title: "Leverans", text: "Snabb och pålitlig leverans till våra kunder." }
+              ].map((item, index) => (
+                <div key={index} className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                  <div className="h-2 bg-gradient-primary mb-6 rounded"></div>
+                  <h3 className="font-georgia text-xl font-bold text-primary mb-4">{item.title}</h3>
+                  <p className="font-helvetica text-secondary">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24">
+      <section id="services" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-georgia text-4xl font-bold text-primary mb-16 text-center">
             Våra tjänster
@@ -95,7 +90,7 @@ const Index = () => {
               Kontakta oss för en kostnadsfri konsultation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Button size="lg" className="bg-primary hover:bg-primary-light font-helvetica flex items-center gap-2">
+              <Button size="lg" className="bg-primary hover:bg-primary-light font-helvetica flex items-center gap-2 text-accent">
                 <Mail className="w-5 h-5" />
                 Begär offert
               </Button>
@@ -109,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-16">
+      <footer className="bg-primary text-accent py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
             <div>
