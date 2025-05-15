@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
       },
     },
     extend: {
+      maxHeight: {
+        '90': '36rem',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -60,7 +62,11 @@ export default {
       },
       fontFamily: {
         georgia: ["Georgia", "serif"],
+        OpenSans: ["Open Sans", "sans-serif"],
         helvetica: ["Helvetica Neue", "sans-serif"],
+      },
+      lineHeight: {
+        none: "1.2",
       },
       keyframes: {
         "accordion-down": {
@@ -84,6 +90,7 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-primary': 'linear-gradient(135deg, #0d1b2a, #1b263b, #415a77)',
+        'gradient-secondary': 'linear-gradient(135deg, rgb(176 184 193), rgb(121 149 201 / 25%), #415a774d)',
       },
     },
   },

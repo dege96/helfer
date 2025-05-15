@@ -1,17 +1,18 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Home, Info, Briefcase, Image, Phone } from "lucide-react";
+import { Home, Info, Briefcase, Image, Phone, Book } from "lucide-react";
+import Logo from '/Logo.svg';
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "#", label: "Hem", icon: <Home className="w-4 h-4" /> },
-    { href: "#om-oss", label: "Om oss", icon: <Info className="w-4 h-4" /> },
-    { href: "#tjanster", label: "Tjänster", icon: <Briefcase className="w-4 h-4" /> },
-    { href: "#referensbilder", label: "Referensbilder", icon: <Image className="w-4 h-4" /> },
-    { href: "#kontakt", label: "Kontakt", icon: <Phone className="w-4 h-4" /> },
+    { href: "/#om-oss", label: "Om oss", isExternal: true },
+    { href: "/#tjanster", label: "Tjänster", isExternal: true },
+    { href: "/referensbilder", label: "Referensbilder", isExternal: false },
+    { href: "/#referenser", label: "Referenser", isExternal: true },
+    { href: "/#kontakt", label: "Kontakt", isExternal: true },
   ];
 
   return (
@@ -19,19 +20,32 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="font-georgia text-2xl font-bold text-primary">
-            Helfer AB
+            <Link to="/">
+              <img src={Logo} alt="Helfer logotyp" className="h-10" />
+            </Link>
           </div>
           
-          <div className="hidden md:flex space-x-8 font-helvetica">
+          <div className="hidden md:flex space-x-8 font-OpenSans">
             {navItems.map((item) => (
-              <a 
-                key={item.label}
-                href={item.href} 
-                className="text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2"
-              >
-                {item.icon}
-                {item.label}
-              </a>
+              item.isExternal ? (
+                <a 
+                  key={item.label}
+                  href={item.href} 
+                  className="text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                >
+                  {item.icon}
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  key={item.label}
+                  to={item.href} 
+                  className="text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                >
+                  {item.icon}
+                  {item.label}
+                </Link>
+              )
             ))}
           </div>
 
@@ -39,7 +53,8 @@ const Navigation = () => {
             <Button 
               variant="default" 
               size="lg" 
-              className="bg-primary hover:bg-primary-light text-accent font-helvetica transition-all duration-300"
+              className="bg-primary hover:bg-primary-light text-accent font-OpenSans transition-all duration-300 transform hover:scale-105" 
+              onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}
             >
               Begär offert
             </Button>
@@ -61,21 +76,33 @@ const Navigation = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 font-helvetica animate-fade-in">
+          <div className="md:hidden mt-4 pb-4 space-y-4 font-OpenSans animate-fade-in">
             {navItems.map((item) => (
-              <a 
-                key={item.label}
-                href={item.href} 
-                className="block text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2 py-2"
-              >
-                {item.icon}
-                {item.label}
-              </a>
+              item.isExternal ? (
+                <a 
+                  key={item.label}
+                  href={item.href} 
+                  className="block text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2 py-2"
+                >
+                  {item.icon}
+                  {item.label}
+                </a>
+              ) : (
+                <Link 
+                  key={item.label}
+                  to={item.href} 
+                  className="block text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2 py-2"
+                >
+                  {item.icon}
+                  {item.label}
+                </Link>
+              )
             ))}
             <Button 
               variant="default" 
               size="lg" 
               className="w-full bg-primary hover:bg-primary-light text-accent transition-all duration-300"
+              onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}
             >
               Begär offert
             </Button>
