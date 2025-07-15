@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Users } from "lucide-react";
-import Bolts from '/public/Bolts.png'; // Justera sökvägen om det behövs
-import BoltVector from '/public/BoltVector.svg';
+import Bolts from '/Bolts.png'; // Använd root-path
+import BoltVector from '/BoltVector.svg';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { useEffect } from "react";
 import References from "@/components/References";
@@ -19,26 +19,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-accent">
-      <Navigation />
+      <Navigation/>
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-primary py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/pattern.png')] opacity-10"></div>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-opacity='0.03' d='M0,86L48,102C96,118,192,150,288,150C384,150,480,118,576,112.7C672,107,768,129,864,139.3C960,150,1056,150,1152,128.7C1248,107,1344,65,1392,43.3L1440,22L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z' transform='rotate(0) translate(0, 60)'/%3E%3C/svg%3E")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "bottom",
-            zIndex: 0,
-          }}
-        />
-        <div className="container mx-auto px-4 relative">
+      <section className="relative bg-gradient-primary pt-40 pb-12 md:pt-48 md:pb-24 overflow-hidden h-screen max-h-[700px] flex md:items-center">
+        <div className="absolute inset-0 bg-[url('/BG_noblur2.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="container relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-16">
             <div className="max-w-3xl">
-              <h1 className="font-OpenSans text-4xl md:text-6xl font-bold text-accent mb-6 animate-fade-in bg-gradient-to-r from-[#93ABD0] to-[#c5ceda] bg-clip-text text-transparent">
-               Precision i varje detalj sedan 1959
+              <p className="font-montserrat text-lg md:text-xl text-white/90 mb-4 uppercase tracking-wide">
+                Ingenjörsfirman Helfer
+              </p>
+              <h1 className="font-montserrat text-4xl md:text-6xl font-extrabold mb-6 animate-fade-in bg-gradient-to-r from-[#9D7627] via-[#E9CF8C] to-[#9D7627] bg-clip-text text-transparent uppercase">
+                Precision i varje detalj sedan 1959.
               </h1>
               <p className="font-OpenSans text-lg md:text-xl text-accent/90 mb-8 leading-relaxed">
               Specialanpassade precisionskomponenter snabbt och effektivt – från splines och kuggskärning till unika profiler, med marknadsledande noggrannhet.
@@ -47,9 +41,11 @@ const Index = () => {
                 <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 font-OpenSans transition-all duration-300 transform hover:scale-105" onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}>
                   Begär offert
                 </Button>
-                <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:text-white hover:bg-white/10 font-OpenSans transition-all duration-300 transform hover:scale-105">
-                  Läs mer om oss
-                </Button>
+{/*            <a href="/#om-oss">
+                  <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:text-white hover:bg-white/10 font-OpenSans transition-all duration-300 transform hover:scale-105 w-full">
+                    Läs mer om oss
+                  </Button>
+                </a> */}
               </div>
             </div>
             <div className="md:text-center md:ml-8 relative">

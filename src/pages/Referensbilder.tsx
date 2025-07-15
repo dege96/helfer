@@ -5,20 +5,13 @@ import { X } from "lucide-react";
 import { VisuallyHidden } from "@/components/ui/visually-hidden";
 
 const imageList = [
-/*   { src: "Bilder/Helfer_bild1.jpg", alt: "Splinekomponent med kuggprofil" },
-  { src: "Bilder/Helfer_bild2.jpg", alt: "Precisionstillverkad axel med splines" },
-  { src: "Bilder/Helfer_bild3.jpg", alt: "Kugghylsa med invändig splines" },
-  { src: "Bilder/Helfer_bild4.jpg", alt: "Set med olika splineshylsor" },
-  { src: "Bilder/Helfer_bild6.jpg", alt: "Detaljbild av splineshylsa" },
-  { src: "Bilder/Helfer_bild9.jpg", alt: "Industriell splinekomponent med gänga" },
-  { src: "Bilder/Helfer_bild11.jpg", alt: "Närbild på invändiga splines" }, */
-  { src: "Bilder/TranspBg/1.png", alt: "Splinekomponent med kuggprofil" },
-  { src: "Bilder/TranspBg/2.png", alt: "Precisionstillverkad axel med splines" },
-  { src: "Bilder/TranspBg/3.png", alt: "Kugghylsa med invändig splines" },
-  { src: "Bilder/TranspBg/4.png", alt: "Set med olika splineshylsor" },
-  { src: "Bilder/TranspBg/5.png", alt: "Detaljbild av splineshylsa" },
-  { src: "Bilder/TranspBg/6.png", alt: "Industriell splinekomponent med gänga" },
-  { src: "Bilder/TranspBg/7.png", alt: "Närbild på invändiga splines" },
+  { src: "/Bilder/TranspBg/1.png", alt: "Splinekomponent med kuggprofil" },
+  { src: "/Bilder/TranspBg/2.png", alt: "Precisionstillverkad axel med splines" },
+  { src: "/Bilder/TranspBg/3.png", alt: "Kugghylsa med invändig splines" },
+  { src: "/Bilder/TranspBg/4.png", alt: "Set med olika splineshylsor" },
+  { src: "/Bilder/TranspBg/5.png", alt: "Detaljbild av splineshylsa" },
+  { src: "/Bilder/TranspBg/6.png", alt: "Industriell splinekomponent med gänga" },
+  { src: "/Bilder/TranspBg/7.png", alt: "Närbild på invändiga splines" },
 ];
 
 const Referensbilder = () => {

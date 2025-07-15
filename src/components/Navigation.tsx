@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Home, Info, Briefcase, Image, Phone, Book } from "lucide-react";
-import Logo from '/Logo.svg';
+import Logo from '/Logo_w-text.svg';
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -16,7 +16,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-accent/80 border-b border-primary/10 sticky top-0 z-50 backdrop-blur-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="font-georgia text-2xl font-bold text-primary">
@@ -31,18 +31,16 @@ const Navigation = () => {
                 <a 
                   key={item.label}
                   href={item.href} 
-                  className="text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                  className="text-white hover:text-white/60 transition-colors duration-200 flex items-center gap-2"
                 >
-                  {item.icon}
                   {item.label}
                 </a>
               ) : (
                 <Link 
                   key={item.label}
                   to={item.href} 
-                  className="text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2"
+                  className="text-white hover:text-white/60 transition-colors duration-200 flex items-center gap-2"
                 >
-                  {item.icon}
                   {item.label}
                 </Link>
               )
@@ -50,14 +48,9 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:block">
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="bg-primary hover:bg-primary-light text-accent font-OpenSans transition-all duration-300 transform hover:scale-105" 
-              onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}
-            >
-              Begär offert
-            </Button>
+          <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 font-OpenSans transition-all duration-300 transform hover:scale-105" onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}>
+                  Kontakta oss
+                </Button>
           </div>
 
           <button 
@@ -82,30 +75,23 @@ const Navigation = () => {
                 <a 
                   key={item.label}
                   href={item.href} 
-                  className="block text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2 py-2"
+                  className="block text-white hover:text-white/80 transition-colors duration-200 flex items-center gap-2 py-2"
                 >
-                  {item.icon}
                   {item.label}
                 </a>
               ) : (
                 <Link 
                   key={item.label}
                   to={item.href} 
-                  className="block text-secondary hover:text-primary transition-colors duration-200 flex items-center gap-2 py-2"
+                  className="block text-white hover:text-white/80 transition-colors duration-200 flex items-center gap-2 py-2"
                 >
-                  {item.icon}
                   {item.label}
                 </Link>
               )
             ))}
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="w-full bg-primary hover:bg-primary-light text-accent transition-all duration-300"
-              onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}
-            >
-              Begär offert
-            </Button>
+                <Button size="lg" className="bg-accent text-primary hover:bg-accent/90 font-OpenSans transition-all duration-300 transform hover:scale-105" onClick={() => window.location.href = 'mailto:splines@helfer.se?subject=Offertförfrågan'}>
+                  Kontakta oss
+                </Button>
           </div>
         )}
       </div>

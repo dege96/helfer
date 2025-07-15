@@ -64,6 +64,7 @@ export default {
         georgia: ["Georgia", "serif"],
         OpenSans: ["Open Sans", "sans-serif"],
         helvetica: ["Helvetica Neue", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       lineHeight: {
         none: "1.2",
@@ -91,6 +92,7 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-primary': 'linear-gradient(135deg, #0d1b2a, #1b263b, #415a77)',
         'gradient-secondary': 'linear-gradient(135deg, rgb(176 184 193), rgb(121 149 201 / 25%), #415a774d)',
+        'gradient-gold': 'linear-gradient(135deg, #f4d03f, #f39c12, #e67e22)',
       },
     },
   },
