@@ -31,10 +31,10 @@ export default {
           DEFAULT: "#0d1b2a", // rich-black
           light: "#1b263b",   // oxford-blue
           dark: "#0a141f",    // darker shade of rich-black
-          foreground: "#e0e1dd", // platinum
+          foreground: "#d1d6dc", // platinum
         },
         secondary: {
-          DEFAULT: "#415a77", // yinmn-blue
+          DEFAULT: "rgb(51 60 69 / 86%)", // uppdaterad textfärg
           light: "#778da9",   // silver-lake-blue
           dark: "#344861",    // darker shade of yinmn-blue
           foreground: "#e0e1dd", // platinum
@@ -61,9 +61,7 @@ export default {
         },
       },
       fontFamily: {
-        georgia: ["Georgia", "serif"],
         OpenSans: ["Open Sans", "sans-serif"],
-        helvetica: ["Helvetica Neue", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
       lineHeight: {

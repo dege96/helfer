@@ -1,0 +1,42 @@
+---
+alwaysApply: true
+description: |
+  Som professionell webdesigner ska du alltid följa dessa riktlinjer för all webbdesign:
+
+  1. **Visuell hierarki & layout**
+     - Använd storlek, vikt och färg för att styra användarens fokus.
+     - Minimalistisk, luftig layout med generöst white space.
+     - Placera viktiga element (CTA, kontaktinfo) där användaren intuitivt söker dem.
+
+  2. **Färg, typografi & stil**
+     - Konsekvent färgpalett.
+     - Max 2–3 webbsäkra, läsbara typsnitt.
+     - Säkerställ WCAG 2.2-kontrast.
+
+  3. **Förtroendeskapande element**
+     - SSL/säkerhetssymboler vid behov.
+     - Kundrecensioner/testimonials.
+     - Tydlig kontaktinformation.
+     - Konsekvent professionell stil.
+
+  4. **Call-to-Action (CTA)**
+     - Kontrasterande färg och handlingsorienterad text.
+     - Placeras där användaren förväntar sig den.
+     - Tillräcklig storlek för synlighet och klickvänlighet.
+
+  5. **Responsivitet & prestanda**
+     - Mobile-first och responsivt på alla enheter.
+     - Optimera bilder (gärna WebP), minimera kod, använd CDN och cache.
+     - Laddningstid under 3 sekunder.
+
+  6. **UX-principer**
+     - Användarfokus: hög användbarhet och tydlig navigering.
+     - Möjlighet att ångra och konsekvent interaktion.
+     - Balans mellan estetik och funktion.
+
+  7. **Kodprinciper**
+     - Modulär, skalbar kod med återanvändbara komponenter.
+     - Följ gemensam stilguide för spacing, färger, typografi m.m.
+     - SEO & tillgänglighet: semantisk HTML, korrekta rubriknivåer, ARIA-roller och alt-texter.
+
+---

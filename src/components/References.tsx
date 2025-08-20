@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type ComponentType } from 'react';
+import { Building2, Factory, Settings, Briefcase, Clock } from 'lucide-react';
 
 const References = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,15 +27,26 @@ const References = () => {
     };
   }, []);
 
-  const references = [
-    { name: 'Haningestrand Golfklubb', logo: '/References/haningestrandgolfklubb.jpg'},
+  type ReferenceItem = {
+    name: string;
+    logo?: string;
+    icon?: ComponentType<{ className?: string; "aria-label"?: string }>;
+  };
+
+  const references: ReferenceItem[] = [
+    { name: 'Haningestrand Golfklubb', logo: '/References/haningestrandgolfklubb.jpg' },
+    { name: 'Annas', logo: '/References/annas.jpg' },
+    { name: 'Företag B', icon: Factory },
+    { name: 'Företag C', icon: Settings },
+    { name: 'Företag D', icon: Briefcase },
+    { name: 'Företag E', icon: Clock },
   ];
 
   return (
     <section id="referenser" ref={sectionRef} className="py-24 bg-accent">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-OpenSans text-4xl font-bold text-primary mb-8 text-center">
+          <h2 className="font-montserrat text-4xl font-bold text-primary mb-8 text-center">
             Våra samarbetspartners
           </h2>
           <div className="prose prose-lg mx-auto text-secondary mb-12">
@@ -48,11 +60,15 @@ const References = () => {
                 key={reference.name}
                 className="w-full h-24 flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
               >
-                <img
-                  src={reference.logo}
-                  alt={`${reference.name} logotyp`}
-                  className="max-h-full max-w-full object-contain"
-                />
+                {reference.logo ? (
+                  <img
+                    src={reference.logo}
+                    alt={`${reference.name} logotyp`}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                ) : reference.icon ? (
+                  <reference.icon className="w-10 h-10 md:w-12 md:h-12 text-primary" aria-label={`${reference.name} ikon`} />
+                ) : null}
               </div>
             ))}
           </div>
