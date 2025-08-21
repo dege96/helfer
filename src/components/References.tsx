@@ -31,11 +31,12 @@ const References = () => {
     name: string;
     logo?: string;
     icon?: ComponentType<{ className?: string; "aria-label"?: string }>;
+    url?: string;
   };
 
   const references: ReferenceItem[] = [
-    { name: 'Haningestrand Golfklubb', logo: '/References/haningestrandgolfklubb.jpg' },
-    { name: 'Annas', logo: '/References/annas.jpg' },
+    { name: 'Haningestrand Golfklubb', logo: '/References/haningestrandgolfklubb.jpg', url: 'https://www.haningestrand.se/' },
+    { name: 'Annas', logo: '/References/annas.jpg', url: 'https://www.annas.se/' },
     { name: 'Företag B', icon: Factory },
     { name: 'Företag C', icon: Settings },
     { name: 'Företag D', icon: Briefcase },
@@ -54,11 +55,12 @@ const References = () => {
               Vi är stolta över att samarbeta med ledande företag inom industrin. Tillsammans skapar vi högkvalitativa lösningar för framtiden.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center cursor-pointer" onClick={() => window.open('https://www.haningestrand.se/', '_blank')}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {references.map((reference) => (
               <div
                 key={reference.name}
-                className="w-full h-24 flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                className={`w-full h-24 flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 ${reference.url ? 'cursor-pointer' : ''}`}
+                onClick={() => reference.url && window.open(reference.url, '_blank')}
               >
                 {reference.logo ? (
                   <img

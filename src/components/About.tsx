@@ -33,9 +33,9 @@ const About = () => {
               
               <div className="md:hidden my-6">
                 <img
-                  src="/Bilder/JDG_0234.JPG"
+                  src="/Bilder/1.png"
                   alt="Produktion hos Ingenjörsfirman Helfer"
-                  className="w-full max-w-md mx-auto rounded-xl shadow-lg object-cover"
+                  className="w-full max-w-md mx-auto rounded-xl object-cover mix-blend-hard-light opacity-80"
                   loading="lazy"
                   draggable={false}
                 />
@@ -54,9 +54,9 @@ const About = () => {
             </div>
             <div className="w-full hidden md:block self-center">
               <img
-                src="/Bilder/JDG_0234.JPG"
+                src="/Bilder/1.png"
                 alt="Produktion hos Ingenjörsfirman Helfer"
-                className="w-full rounded-xl shadow-lg object-cover"
+                className="w-full rounded-xl object-cover mix-blend-hard-light opacity-80"
                 loading="lazy"
                 draggable={false}
               />

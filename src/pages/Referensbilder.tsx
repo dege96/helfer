@@ -92,7 +92,7 @@ const Referensbilder = () => {
               Referensbilder
             </h1>
             
-            <p className="font-OpenSans text-lg md:text-xl text-secondary leading-relaxed max-w-3xl mx-auto mb-6 md:mb-8">
+            <p className="font-OpenSans text-lg md:text-xl text-secondary leading-relaxed max-w-3xl mx-auto mb-6 md:mb-8 opacity-70">
               Här ser du exempel på våra specialtillverkade precisionsdetaljer och splines. Klicka på en bild för att se den i större format.
             </p>
             

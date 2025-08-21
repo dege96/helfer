@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="py-24 bg-[linear-gradient(135deg,_rgb(58_61_65),_rgb(65_80_108_/_25%),_#374454)]">
+    <section id="tjanster" className="py-24">
       <div className="container mx-auto px-4">
         <h2 className="font-montserrat text-4xl font-bold text-primary mb-16 text-center">
           Våra produktområden
