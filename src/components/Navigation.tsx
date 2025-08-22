@@ -91,7 +91,7 @@ Toleranser/noggrannhetskrav: [Om aktuellt]
           <div className="flex justify-between items-center">
             <div className="font-montserrat text-2xl font-bold text-primary">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                <img src="/Logo_w-text.svg" alt="Helfer logotyp" className="h-10" />
+                <img src={darkText ? '/Logo.svg' : '/Logo_w-text.svg'} alt="Helfer logotyp" className="h-10" />
               </Link>
             </div>
             
@@ -119,7 +119,7 @@ Toleranser/noggrannhetskrav: [Om aktuellt]
             </div>
 
             <div className="hidden md:block">
-            <Button size="lg" variant="glassmorphism" className={`font-OpenSans ${darkText ? 'text-[#0D1B2A]' : ''}`} onClick={handleContactClick}>
+            <Button size="lg" variant="glassmorphism" className={`font-OpenSans ${darkText ? 'text-[#0D1B2A]' : ''}`} onClick={handleContactClick} style={{ mixBlendMode: 'difference' }}>
                     Kontakta oss
                   </Button>
             </div>

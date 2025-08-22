@@ -29,7 +29,7 @@ export default {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#0d1b2a", // rich-black
-          light: "#1b263b",   // oxford-blue
+          light: "#1d2f41",   // oxford-blue
           dark: "#0a141f",    // darker shade of rich-black
           foreground: "#d1d6dc", // platinum
         },

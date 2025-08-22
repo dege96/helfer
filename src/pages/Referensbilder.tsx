@@ -85,7 +85,7 @@ const Referensbilder = () => {
       <Navigation />
       
       {/* Hero-sektion med förbättrad visuell hierarki */}
-      <section className="pt-20 md:pt-28 pb-4 md:pb-10">
+      <section className="pt-40 md:pt-40 pb-4 md:pb-10" style={{ paddingTop: "10rem" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-montserrat text-4xl md:text-6xl font-bold text-primary mb-6 animate-fade-in">
@@ -102,7 +102,7 @@ const Referensbilder = () => {
       </section>
 
       {/* Förbättrat bildgalleri med modern layout */}
-      <section id="gallery" className="pt-8 md:pt-12 pb-16 md:pb-24">
+      <section id="gallery" className="md:pt-12 pb-16 md:pb-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {imageList.map((image, index) => (

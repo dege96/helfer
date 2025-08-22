@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-primary pt-40 pb-12 md:pt-48 md:pb-24 overflow-hidden h-screen max-h-[700px] flex md:items-center">
+    <section className="relative bg-gradient-primary pt-40 pb-12 md:pt-48 md:pb-24 overflow-hidden h-screen md:max-h-[700px] flex md:items-center min-h-screen">
       <div className="absolute inset-0 bg-[url('/BG_noblur2.jpg')] bg-cover bg-center"></div>
       <div className="absolute inset-0 bg-black/60"></div>
       {/* Bottom fade overlay */}
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
-      <div className="container relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-16">
-          <div className="max-w-3xl">
+      <div className="container relative z-10 h-full">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 md:px-16 h-full">
+          <div className="max-w-3xl flex flex-col justify-center h-full">
             <p className="font-montserrat text-lg md:text-xl text-white/90 mb-4 uppercase tracking-wide">
               Ingenjörsfirman Helfer
             </p>
@@ -33,7 +33,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="md:text-center md:ml-8 relative">
+          <div className="md:text-center md:ml-8 relative flex-1 flex items-center justify-center h-full">
             <img
               src="/BoltVector.svg"
               alt="Vektorillustration av en bult"
@@ -54,5 +54,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-

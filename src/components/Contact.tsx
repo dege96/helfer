@@ -1,5 +1,6 @@
 import { Mail, Phone, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const contacts = [
   { name: "Conny Sjölander", role: "Produktionsansvarig" },
@@ -23,11 +24,19 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="font-OpenSans text-accent/90 space-y-4">
-                <p>
-                  Ingenjörsfirman Helfer AB<br />
-                  Antennvägen 12<br />
-                  135 48 Tyresö
-                </p>
+                <a
+                  href="https://www.google.com/maps?q=Ingenj%C3%B6rsfirman+Helfer+AB,+Antennv%C3%A4gen+12,+135+48+Tyres%C3%B6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Öppna adressen i Google Maps"
+                  className="hover:text-white transition-colors underline underline-offset-4 decoration-white/30 hover:decoration-white"
+                >
+                  <address className="not-italic">
+                    Ingenjörsfirman Helfer AB<br />
+                    Antennvägen 12<br />
+                    135 48 Tyresö
+                  </address>
+                </a>
                 <p className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   <a href="tel:+4687123006" className="hover:text-white transition-colors">+46 8 712 30 06</a>
@@ -56,6 +65,20 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+          </div>
+
+          {/* Karta */}
+          <div className="mt-12">
+            <h3 className="font-montserrat text-2xl font-bold text-accent mb-4 text-center md:text-left">Hitta hit</h3>
+            <AspectRatio ratio={16 / 9} className="rounded-xl overflow-hidden border border-white/20 shadow-lg bg-white/10 backdrop-blur-md">
+              <iframe
+                title="Karta - Ingenjörsfirman Helfer AB"
+                src="https://www.google.com/maps?q=Antennv%C3%A4gen+12%2C+135+48+Tyres%C3%B6&output=embed&hl=sv"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full border-0"
+              />
+            </AspectRatio>
           </div>
         </div>
       </div>

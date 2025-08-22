@@ -48,7 +48,7 @@ const References = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-montserrat text-4xl font-bold text-primary mb-8 text-center">
-            Våra samarbetspartners
+            Samarbetspartners
           </h2>
           <div className="prose prose-lg mx-auto text-secondary mb-12">
             <p className="font-OpenSans leading-relaxed text-center">
