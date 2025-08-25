@@ -8,10 +8,22 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-10 items-start">
             {/* Vänster kolumn: Titel, proof points, text */}
             <div>
-              <h2 className="font-montserrat text-4xl font-bold text-accent mb-8 md:mb-12 text-center md:text-left">
+              <h2 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-8 md:mb-12 text-center md:text-left">
                 Specialister på splines
               </h2>
+          
               
+              {/* Bild för mobil, centrerad */}
+              <div className="md:hidden my-6 flex justify-center">
+                <img
+                  src="/Bilder/1.png"
+                  alt="Produktion hos Ingenjörsfirman Helfer"
+                  className="w-full max-w-md rounded-xl object-cover"
+                  loading="lazy"
+                  draggable={false}
+                />
+              </div>
+
               {/* Proof Points */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
@@ -31,17 +43,8 @@ const About = () => {
                   <span className="font-OpenSans font-semibold text-accent">ISO-certifierad</span>
                 </div>
               </div>
-              
-              {/* Bild för mobil, centrerad */}
-              <div className="md:hidden my-6 flex justify-center">
-                <img
-                  src="/Bilder/1.png"
-                  alt="Produktion hos Ingenjörsfirman Helfer"
-                  className="w-full max-w-md rounded-xl object-cover"
-                  loading="lazy"
-                  draggable={false}
-                />
-              </div>
+
+              {/* Text */}
               <div className="prose prose-lg text-accent/80 text-center md:text-left">
                 <p className="font-OpenSans leading-relaxed mb-6">
                   Sedan 1959 har vi tillverkat precisionsdetaljer för olika ändamål inom industrin. Vår specialitet är splines, splinesskärning, kuggskärning, kilspår och olika profiler med marknadsledande noggrannhet.

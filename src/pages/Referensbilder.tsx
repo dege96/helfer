@@ -87,8 +87,8 @@ const Referensbilder = () => {
       {/* Hero-sektion med förbättrad visuell hierarki */}
       <section className="pt-40 md:pt-40 pb-4 md:pb-10" style={{ paddingTop: "10rem" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-montserrat text-4xl md:text-6xl font-bold text-primary mb-6 animate-fade-in">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="font-montserrat text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary mb-6 animate-fade-in">
               Referensbilder
             </h1>
             
@@ -102,7 +102,7 @@ const Referensbilder = () => {
       </section>
 
       {/* Förbättrat bildgalleri med modern layout */}
-      <section id="gallery" className="md:pt-12 pb-16 md:pb-24">
+      <section id="gallery" className="pb-16 md:pb-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {imageList.map((image, index) => (
@@ -154,8 +154,8 @@ const Referensbilder = () => {
       </section>
 
       {/* Förbättrad lightbox med modern design */}
-      <Dialog open={selectedIndex !== null} onOpenChange={() => setSelectedIndex(null)}>
-        <DialogContent className="sm:max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent shadow-none">
+      <Dialog open={selectedIndex !== null} onOpenChange={(isOpen) => { if (!isOpen) setSelectedIndex(null); }}>
+        <DialogContent className="sm:max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent shadow-none" onInteractOutside={() => setSelectedIndex(null)} onEscapeKeyDown={() => setSelectedIndex(null)}>
           <DialogTitle>
             <VisuallyHidden>Bildvisare - {selectedIndex !== null ? imageList[selectedIndex].title : ''}</VisuallyHidden>
           </DialogTitle>

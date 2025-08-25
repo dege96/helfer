@@ -13,11 +13,11 @@ const Hero = () => {
             <p className="font-montserrat text-lg md:text-xl text-white/90 mb-4 uppercase tracking-wide">
               Ingenjörsfirman Helfer
             </p>
-            <h1 className="font-montserrat text-4xl md:text-6xl font-extrabold mb-6 animate-fade-in bg-gradient-to-r from-[#9D7627] via-[#E9CF8C] to-[#9D7627] bg-clip-text text-transparent">
+            <h1 className="font-montserrat text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 animate-fade-in bg-gradient-to-r from-[#9D7627] via-[#E9CF8C] to-[#9D7627] bg-clip-text text-transparent">
               Precision i varje detalj sedan 1959
             </h1>
             <p className="font-OpenSans text-lg md:text-xl text-accent/90 mb-8 leading-relaxed opacity-90">
-              Specialanpassade precisionskomponenter – från splines och kuggskärning till unika profiler, med marknadsledande noggrannhet.
+              Specialanpassade precisionskomponenter – splines, kuggskärning och mer. Med marknadsledande noggrannhet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button

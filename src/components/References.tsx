@@ -46,13 +46,13 @@ const References = () => {
   return (
     <section id="referenser" ref={sectionRef} className="py-24 bg-accent">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-montserrat text-4xl font-bold text-primary mb-8 text-center">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-montserrat text-3xl sm:text-5xl lg:text-6xl font-bold text-primary mb-8 text-center">
             Samarbetspartners
           </h2>
           <div className="prose prose-lg mx-auto text-secondary mb-12">
             <p className="font-OpenSans leading-relaxed text-center">
-              Vi är stolta över att samarbeta med ledande företag inom industrin. Tillsammans skapar vi högkvalitativa lösningar för framtiden.
+              Vi är stolta över att samarbeta med ledande företag inom industrin.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">

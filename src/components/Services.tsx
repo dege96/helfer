@@ -24,9 +24,9 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="tjanster" className="py-24">
+    <section id="tjanster" className="py-32">
       <div className="container mx-auto px-4">
-        <h2 className="font-montserrat text-4xl font-bold text-primary mb-16 text-center">
+        <h2 className="font-montserrat text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-16 text-center">
           Våra produktområden
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
